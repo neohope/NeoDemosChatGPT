@@ -1,0 +1,6 @@
+openai==0.27.2
+matplotlib
+plotly
+scipy
+scikit-learn
+gradio
