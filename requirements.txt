@@ -6,3 +6,4 @@ scikit-learn
 gradio
 yaml
 tiktoken
+backoff
