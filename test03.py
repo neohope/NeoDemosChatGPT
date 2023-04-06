@@ -10,7 +10,7 @@ import yaml
 # for windows
 set PATH=D:/NeoLang/Python/Python310_x64;%PATH%
 python -m venv venv
-venv/Scripts/activate
+venv\\Scripts\\activate
 pip install -r requirements.txt
 python test03.py
 
