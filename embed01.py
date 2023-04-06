@@ -18,7 +18,7 @@ def get_api_key():
 # 选择使用最小的ada模型
 EMBEDDING_MODEL = "text-embedding-ada-002"
 
-# 获取"好评"和"差评"的
+# 获取"好评"和"差评"的向量
 positive_review = get_embedding("好评")
 negative_review = get_embedding("差评")
 
