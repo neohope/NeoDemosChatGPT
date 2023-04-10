@@ -3,7 +3,9 @@
 
 from sklearn.datasets import fetch_20newsgroups
 import pandas as pd
-import yaml
+import yaml, openai
+from IPython.display import display
+
 
 '''
 工具类
@@ -13,6 +15,12 @@ def get_api_key():
     with open("config.yaml", "r", encoding="utf-8") as yaml_file:
         yaml_data = yaml.safe_load(yaml_file)
         print(yaml_data["openai"]["api_key"])
+
+
+def list_openai_engines():
+    engines = openai.Engine.list()
+    pd = pd.DataFrame(openai.Engine.list()['data'])
+    display(pd[['id', 'owner']])
 
 
 embedding_encoding = "cl100k_base" # this the encoding for text-embedding-ada-002
@@ -32,4 +40,5 @@ def twenty_newsgroup_to_csv():
 
 if __name__ == '__main__':
     get_api_key()
+    list_openai_engines()
     #twenty_newsgroup_to_csv()
