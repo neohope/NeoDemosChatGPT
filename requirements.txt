@@ -8,3 +8,8 @@ yaml
 tiktoken
 backoff
 IPython
+faiss-cpu
+#faiss-gpu
+llama-index
+spacy
+
