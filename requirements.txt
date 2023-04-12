@@ -12,4 +12,6 @@ faiss-cpu
 #faiss-gpu
 llama-index
 spacy
-
+sentence-transformers
+icetk
+cpm_kernels
