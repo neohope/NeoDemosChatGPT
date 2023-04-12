@@ -4,7 +4,7 @@ plotly
 scipy
 scikit-learn
 gradio
-yaml
+pyyaml
 tiktoken
 backoff
 IPython
