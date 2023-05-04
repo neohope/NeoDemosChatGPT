@@ -15,3 +15,7 @@ spacy
 sentence-transformers
 icetk
 cpm_kernels
+pydub
+openai-whisper
+setuptools-rust
+azure-cognitiveservices-speech
