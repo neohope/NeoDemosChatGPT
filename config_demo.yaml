@@ -1,2 +1,8 @@
+# 几乎所有的demo
 openai:
   api_key: CHAT_GPT_API_KEY
+
+# 仅很少的demo，地域可以选择eastus
+azure:
+  region: AZURE_SPEECH_REGION
+  subscription: AZURE_SPEECH_KEY

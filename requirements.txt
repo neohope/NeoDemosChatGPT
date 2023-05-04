@@ -19,3 +19,5 @@ pydub
 openai-whisper
 setuptools-rust
 azure-cognitiveservices-speech
+paddlepaddle
+paddlespeech
