@@ -2,8 +2,8 @@
 # -*- coding utf-8 -*-
 
 import openai
-import gradio as gr
 import yaml
+import gradio as gr
 
 '''
 通过Gradio增加了聊天机器人界面
@@ -13,7 +13,6 @@ def get_api_key():
     with open("config.yaml", "r", encoding="utf-8") as yaml_file:
         yaml_data = yaml.safe_load(yaml_file)
         openai.api_key = yaml_data["openai"]["api_key"]
-
 
 class Conversation3:
     def __init__(self, prompt, num_of_round):
@@ -44,6 +43,15 @@ class Conversation3:
             del self.messages[1:3] 
         return message
 
+# 通过chatgpt获取聊天反馈
+def answer(question, history=[]):
+    history.append(question)
+    response = conv.ask(question)
+    history.append(response)
+    responses = [(u,b) for u,b in zip(history[::2], history[1::2])]
+    return responses, history
+
+
 if __name__ == '__main__':
     get_api_key()
 
@@ -52,13 +60,6 @@ if __name__ == '__main__':
     2. 回答限制在100个字以内"""
 
     conv = Conversation3(prompt, 10)
-
-    def answer(question, history=[]):
-        history.append(question)
-        response = conv.ask(question)
-        history.append(response)
-        responses = [(u,b) for u,b in zip(history[::2], history[1::2])]
-        return responses, history
 
     with gr.Blocks(css="#chatbot{height:300px} .overflow-y-auto{height:500px}") as demo:
         chatbot = gr.Chatbot(elem_id="chatbot")
