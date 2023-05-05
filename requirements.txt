@@ -21,3 +21,4 @@ setuptools-rust
 azure-cognitiveservices-speech
 paddlepaddle
 paddlespeech
+opencv-python
