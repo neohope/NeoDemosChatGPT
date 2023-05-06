@@ -23,10 +23,11 @@ if __name__ == '__main__':
     init_image = init_image.resize((852, 640))
 
     # 生成图片
-    # prompt = "realism style, beautiful flowers in grassland"
+    # prompt = "realism style, beautiful flowers on grassland"
     # prompt = "Chinese ink painting style, flowers in the forest"
-    prompt = "finger painting style, beautiful big flowers in the forest"
-    negative_prompt = "building"
+    # prompt = "finger painting style, beautiful big flowers in the forest"
+    prompt = "finger painting style, one boat and several beautiful flowers on grassland"
+    negative_prompt = "building, water, human"
     images = pipeline(prompt=prompt, negative_prompt=negative_prompt, image=init_image, strength=0.75, guidance_scale=7.5).images
     images[0].save("./created/ryder001.jpg")
     display(images[0])

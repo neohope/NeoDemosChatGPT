@@ -25,6 +25,7 @@ if __name__ == '__main__':
         pipeline = DiffusionPipeline.from_pretrained("runwayml/stable-diffusion-v1-5")
         pipeline.to("cpu")
         # pipeline.to("cuda")
-        image = pipeline("a photograph of an astronaut riding a horse").images[0]
+        # image = pipeline("a photograph of an astronaut riding a horse").images[0]
+        image = pipeline("an astronaut riding a horse").images[0]
         image.save("./created/astronaut_riding_horse.jpg")
         display(image)
