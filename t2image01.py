@@ -3,6 +3,7 @@
 
 import torch
 from diffusers import DiffusionPipeline
+from IPython.display import display
 
 """
 使用 Stable Diffusion 生成图片
@@ -22,6 +23,8 @@ if __name__ == '__main__':
 
     with torch.no_grad():
         pipeline = DiffusionPipeline.from_pretrained("runwayml/stable-diffusion-v1-5")
-        pipeline.to("cuda")
+        pipeline.to("cpu")
+        # pipeline.to("cuda")
         image = pipeline("a photograph of an astronaut riding a horse").images[0]
-        image
+        image.save("./created/astronaut_riding_horse.jpg")
+        display(image)
