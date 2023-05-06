@@ -18,7 +18,7 @@ if __name__ == '__main__':
     pipeline = pipeline.to("cuda")
 
     # 载入初始图片
-    image_file = "./data/ridyr001.jpg"
+    image_file = "./data/ryder001.jpg"
     init_image = Image.open(image_file).convert("RGB")
     init_image = init_image.resize((852, 640))
 
@@ -28,5 +28,5 @@ if __name__ == '__main__':
     prompt = "finger painting style, beautiful big flowers in the forest"
     negative_prompt = "building"
     images = pipeline(prompt=prompt, negative_prompt=negative_prompt, image=init_image, strength=0.75, guidance_scale=7.5).images
-    images[0].save("./created/ridyr001.jpg")
+    images[0].save("./created/ryder001.jpg")
     display(images[0])
