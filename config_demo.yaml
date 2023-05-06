@@ -10,3 +10,7 @@ azure:
 # 仅did的demo
 did:
   api_key: DID_API_KEY
+
+# 仅huggingface inference api的demo
+huggingface:
+  api_key: HF_API_KEY
