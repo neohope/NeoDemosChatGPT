@@ -22,3 +22,6 @@ azure-cognitiveservices-speech
 paddlepaddle
 paddlespeech
 opencv-python
+diffusers
+accelerate
+transformers

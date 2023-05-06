@@ -27,5 +27,22 @@ How to build
     python test01.py
 ```
 
+5. 要匹配cuda版本及pytorch版本
+```shell
+# 查询cuda版本及pytorch版本
+https://pytorch.org/get-started/locally/
+https://developer.nvidia.com/cuda-toolkit-archive
+
+# 下载所需cuda，比如118
+
+# 安装对应版本的pytorch
+# pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+# 测试一下
+import torch
+print(torch.cuda.is_available())
+```
+
 Reference
 =========
