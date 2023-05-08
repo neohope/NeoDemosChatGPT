@@ -25,3 +25,6 @@ opencv-python
 diffusers
 accelerate
 transformers
+xformers
+opencv-contrib-python
+controlnet_aux
