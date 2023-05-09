@@ -12,6 +12,15 @@ from diffusers import StableDiffusionControlNetPipeline, ControlNetModel
 """
 使用ControlNet增强图像生成的稳定性
 先用opencv获取头部轮廓，然后把图片换成明星脸
+
+Canny，边缘检测
+Open Pose，捕捉人体的动作
+Scribble，以一个简单的简笔画为基础，生成精美的图片
+HED Boundary，外一种边缘检测算法
+Depth，深度估计，也就是对一张图片的前后深度估计出来的轮廓图
+Normal Map，法线贴图，通常在游戏中用得比较多，可以在不增加模型复杂性的情况下，提升细节效果
+Semantic Segmentation，语义分割图，可以把图片划分成不同的区域模块
+M-LSD，这个能够获取图片中的直线段，很适合用来给建筑物或者房间内的布局描绘轮廓，这个算法也常常被用在自动驾驶里面
 """
 
 def get_canny_image(original_image, low_threshold=100, high_threshold=200):
