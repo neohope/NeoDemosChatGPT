@@ -60,7 +60,7 @@ def translate(text):
     messages.append( {"role": "system", "content": "你是一个翻译，把用户的话翻译成英文"})
     messages.append( {"role": "user", "content": text})
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo", messages=messages, temperature=0.5, max_tokens=2048,        n=1
+        model="gpt-3.5-turbo", messages=messages, temperature=0.5, max_tokens=2048, n=1
     )
     return response["choices"][0]["message"]["content"]
 

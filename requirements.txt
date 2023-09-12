@@ -28,3 +28,4 @@ transformers
 xformers
 opencv-contrib-python
 controlnet_aux
+qdrant-client
