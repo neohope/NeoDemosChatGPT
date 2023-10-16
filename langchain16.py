@@ -18,7 +18,7 @@ def get_api_key():
         openai.api_key = yaml_data["openai"]["api_key"]
 
 
-async def main():
+async def web_query():
     response = await agent_chain.arun("What are the headers on python.langchain.com?")
     print(response)
 
@@ -43,4 +43,4 @@ if __name__ == '__main__':
     )
 
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(main())
+    loop.run_until_complete(web_query())
